@@ -1,0 +1,270 @@
+body * {
+    font-family: 'Almarai', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background: #222222;
+}
+
+.container{
+    
+    max-width: 1200px;
+}
+
+
+
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: #5e5e5e;
+    width: 95%;
+}
+
+
+.links {
+    display: flex;
+    width: 75%;
+    height: 100%;
+    justify-content: flex-start;
+}
+
+.links div{
+    color: white;
+    height: 100%;
+    padding: 25px;
+    padding-left: 15px;
+    font-size: 15px;
+    cursor: context-menu;
+}
+
+.logo{
+    width: 10%;
+}
+
+.logo img{
+    width: 100px;
+}
+
+i{
+    font-family: "Font Awesome 5 free"
+}
+
+.icons{
+    width: 15%;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.lang{
+cursor: pointer;
+}
+
+
+.icons i{
+    padding: 10px;
+    cursor: pointer;
+}
+
+.icons .fa-caret-down{
+    font-size: 15px;
+    padding: 0;
+}
+
+.icons .fa-globe{
+    padding-right: 0;
+}
+
+
+
+/* -----------------------------------------------------------------------  crsel      */
+
+.card-slide,
+.food,
+.crsel{
+    width: 95%;
+}
+
+
+#carouselExampleDark{
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+.carousel-indicators button{
+    background: white;
+    color: white;
+}
+
+
+.carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: white;
+    height: 10px;
+    width: 50px;
+    border-radius: 95px;
+    border-top: 0;
+    border-bottom: 0;
+
+}
+
+
+/* -------------------------------------------------------------------------------------- card slide */
+
+
+.card-slide .father .bottom{
+    display: flex;
+    column-gap: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------------------- food */
+
+.sside{
+    position: relative;
+}
+.sside hr{
+    width: 100%;
+    color: white;
+    height: 3px;
+    background: white;
+    opacity: 1;
+}
+
+
+.sside h4{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%,-50%);
+    color: white;
+    overflow: hidden;
+    background: #222222;
+    width:150px;
+    padding: 10px;
+    border-radius: 12px;
+    border: 2px solid white;
+    text-align: center;
+
+}
+
+
+.grid{
+    display: grid;
+    grid-template-columns:  repeat( 4 , minmax( 150px , 1fr ));
+    grid-template-rows: repeat( 4 , minmax( 150px , 1fr ));
+    gap: 20px;
+    background: transparent;
+
+}
+
+.grid .top img {
+    width: 100%;
+}
+
+.grid .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #222222;
+    overflow: hidden;
+}
+
+
+.grid .father ~h6{
+    width: 100%;
+    background: #858585;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    color: white;
+    z-index: 1;
+}
+
+
+.grid .father{
+    position: relative;
+}
+.grid .bottom{
+    position:absolute;
+    background: white;
+    top:100%;
+    left: 0;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    opacity: .7;
+    transition: 1s;
+}
+
+.grid .bottom h6{
+    padding: 5px;
+
+}
+
+.grid .card:hover .bottom{
+    top: 0;
+}
+
+
+
+/* ----------------------------------------------------------- call us  */
+
+
+
+.call-us{
+    background:  #FA933B;
+    height: 35px;
+    border-top-left-radius: 20px; 
+    border-top-right-radius: 20px ; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
