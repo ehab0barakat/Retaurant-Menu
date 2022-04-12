@@ -8,10 +8,6 @@ body{
     background: #222222;
 }
 
-.container{
-    
-    max-width: 1100px;
-}
 
 
 
@@ -38,7 +34,8 @@ body{
     justify-content: flex-start;
 }
 
-.links~div{
+.links div{
+    position: relative;
     color: white;
     height: 100%;
     padding: 25px;
@@ -46,6 +43,19 @@ body{
     font-size: 15px;
     cursor: context-menu;
 }
+
+.links a::after{
+    content: "";
+    width: 100%;
+    height: 20px;
+    position:absolute;
+    left :0;
+    bottom: 0;
+    color: blue;
+    z-index: 999999999;
+}
+
+
 
 .logo{
     width: 10%;
@@ -95,8 +105,10 @@ cursor: pointer;
     width: 95%;
 }
 
-.crsel{
-    margin-top: 100px !important ;
+.crsel,
+.crsel img{
+    margin-top: 45px !important ;
+    max-height: 425px;
 }
 
 #carouselExampleDark{
@@ -125,6 +137,7 @@ cursor: pointer;
 
 
 .card-slide  {
+    margin-top: 60px !important;
     position: relative;
     overflow-x: clip;
 }
@@ -206,6 +219,7 @@ cursor: pointer;
     font-size: 35px;
     padding: 15px;
     overflow-x: hidden;
+    cursor: pointer;
 }
 
 .actv{
@@ -244,7 +258,7 @@ cursor: pointer;
     left: -30px !important;
     border: none !important;
     transform: translateX(0) !important;
-
+    /* transition: .5s !important; */
 
 
 
@@ -271,7 +285,6 @@ cursor: pointer;
 .sside h4{
     position: absolute;
     left: 50%;
-    top: 0;
     transform: translate(-50%,-50%);
     color: white;
     overflow: hidden;
@@ -287,8 +300,8 @@ cursor: pointer;
 
 .grid{
     display: grid;
-    grid-template-columns:  repeat( 4 , minmax( 150px , 1fr ));
-    grid-template-rows: repeat( 4 , minmax( 150px , 1fr ));
+    grid-template-columns:  repeat( 4 , minmax( 75px , 1fr ));
+    grid-template-rows: repeat( 4 , minmax( 75px , 1fr ));
     gap: 20px;
     background: transparent;
 
@@ -335,16 +348,22 @@ cursor: pointer;
     width: 100%;
     height: 100%;
     opacity: .7;
-    transition: 1s;
 }
 
 .grid .bottom h6{
     padding: 5px;
-
+    
 }
 
 .grid .card:hover .bottom{
+    transition: 1s;
     top: 0;
+}
+
+.grid .card:hover .top img{
+    transform: scale(1.25) rotateZ(20deg) ;
+    transition: 1s;
+
 }
 
 
@@ -421,4 +440,62 @@ background: #585858;
 tr:hover{
     background: #FF9031;
 
+}
+
+
+
+
+.memo:hover{
+    transition: .2s;
+    transform: scale(1.07);
+}
+
+
+
+/* .sside h4{
+    box-shadow: 0  0 0  inset;
+} */
+
+
+/* .sside h4::after,
+.sside h4::before{
+    content: "";
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0;
+    
+    background : #FF9031;
+    
+}
+
+.sside h4::before{
+    right: 0%;
+} */
+
+
+
+
+/* 
+
+.ssid h4:hover::after {
+
+} */
+
+
+
+
+@media (min-width:280px) {
+    
+    .main-nav .logo img{
+        width: 50px;
+    }
+
+    .main-nav .links{
+        font-size: 12px;
+        
+    }
+ 
+    
 }
