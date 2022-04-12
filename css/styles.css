@@ -10,7 +10,7 @@ body{
 
 .container{
     
-    max-width: 1200px;
+    max-width: 1100px;
 }
 
 
@@ -23,6 +23,11 @@ body{
     border-bottom-right-radius: 15px;
     background: #5e5e5e;
     width: 95%;
+    position: fixed;
+    top: 0;
+    z-index: 5000000000;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 
@@ -33,7 +38,7 @@ body{
     justify-content: flex-start;
 }
 
-.links div{
+.links~div{
     color: white;
     height: 100%;
     padding: 25px;
@@ -86,11 +91,13 @@ cursor: pointer;
 /* -----------------------------------------------------------------------  crsel      */
 
 .card-slide,
-.food,
 .crsel{
     width: 95%;
 }
 
+.crsel{
+    margin-top: 100px !important ;
+}
 
 #carouselExampleDark{
     overflow: hidden;
@@ -117,9 +124,108 @@ cursor: pointer;
 /* -------------------------------------------------------------------------------------- card slide */
 
 
-.card-slide .father .bottom{
-    display: flex;
+.card-slide  {
+    position: relative;
+    overflow-x: clip;
+}
+
+
+.card-slide::after  {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    left: 0;
+    top:0;
+    background: #222222;
+}
+
+.card-slide::before  {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 100%;
+    right: 0;
+    z-index: 1;
+    top:0;
+    background: #222222;
+}
+
+
+.card-slide>.father {
+    width: calc(100% - 80px );
+    left: 50%;
+    transform: translateX(-50px);
+}
+
+
+.card-slide .father  .bottom{
+    display: inline-flex;
     column-gap: 15px;
+    transform: translateX(0);
+    transition: .2s;
+    
+}
+
+.card-slide .father .bottom .memo img{
+    border-radius: 50px;
+    background: white;
+}
+
+
+.card-slide .father .bottom  .memo{
+    display:inline-block;   
+    padding: 8px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    justify-content: center;
+    background-color: #f7f7f7;
+    background-clip: border-box;
+    align-items: center;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 1rem;
+    
+}
+
+
+
+.prevv ,
+.nextt{
+    position: absolute;
+    background: #747474;
+    height: 100%;
+    width: 20px;
+    z-index: 10;
+    top: 0;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    padding: 15px;
+    overflow-x: hidden;
+}
+
+.actv{
+    color: #FF9031;
+
+}
+
+
+
+
+.nextt{
+    right: 0;
+    border-top-right-radius: 15px ;
+    border-bottom-right-radius:  15px;
+}
+
+.prevv{
+    left: 0;
+    border-top-left-radius: 15px ;
+    border-bottom-left-radius:  15px;
 }
 
 
@@ -127,32 +233,22 @@ cursor: pointer;
 
 
 
+.frame{
+    background: transparent;
+    display: block !important;
+    position: absolute; 
+    inset: 0px auto auto 0px !important; 
+    margin-top: 200px !important; 
+    transform: translate(0) !important;
+    width: calc( 100% + 80px);
+    left: -30px !important;
+    border: none !important;
+    transform: translateX(0) !important;
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
@@ -212,7 +308,7 @@ cursor: pointer;
 }
 
 
-.grid .father ~h6{
+.grid .father ~ h6{
     width: 100%;
     background: #858585;
     padding-top: 7px;
@@ -267,4 +363,61 @@ cursor: pointer;
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    position: fixed;
+    bottom: 0;
+    z-index: 999999999;
+}
+
+
+
+
+.food{
+    border: none;
+    width: 100%;
+    margin: 0 !important;
+}
+
+
+table,
+tr {
+  border: 1px solid black;
+  align-items: center;
+  text-align: center;
+}
+
+.comp ,
+.mobile{
+  margin-top: 15px;
+}
+
+
+.tableu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 15px;
+}
+
+table {
+width: 48%;
+color: white;
+}
+
+.fath{
+background: #b4b4b4;
+}
+
+.kamk{
+background: #747474;
+}
+
+th{
+background: #585858;
+}
+
+
+tr:hover{
+    background: #FF9031;
+
 }
