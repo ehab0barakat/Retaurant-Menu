@@ -200,7 +200,7 @@ cursor: pointer;
     align-items: center;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 1rem;
-    
+    color: black;    
 }
 
 .card-slide .fatherr .bottom  .memo{
@@ -836,141 +836,9 @@ tr:hover{
 }
 
 
-@media (max-width:280px) {
-    
-    .main-nav .logo img{
-        width: 30px;
-    }    
 
-    .main-nav .links{
-        justify-content: center;
-        gap: 2px;        
-    }    
- 
-    .links div {
-        padding: 1px;
-        font-size: .5rem;
-    }    
-
-
-    .icons{
-        font-size: 6px;
-        justify-content: center;
-    }    
-
-
-    .icons i {
-        padding: 3px;
-    }    
-
-    .icons .fa-caret-down {
-        font-size: 5px;
-    }    
-
-
-    .lang #btnGroupDrop1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2px;
-    }    
-
-
-
-
-    .crsel{
-        margin-top: 0% !important;
-        padding-top: 0% !important;
-    }    
-    
-    
-        #carousel-indicators button{
-            height: 5px !important;
-        }    
-    
-        .carousel-control-next-icon, .carousel-control-prev-icon {
-            width: 1rem;
-            margin-top: 45px;
-    
-        }    
-    
-        
-        .carousel-dark .carousel-indicators [data-bs-target] {
-            height: 5px;
-            width: 15px;
-            border-radius: 95px;
-            border-top: 0;
-            border-bottom: 0;
-    
-        }            
-
-    .card-slide{
-        margin-top: 20px !important;
-    }
-
-    .card-slide .father .bottom {
-        column-gap: 10px;
-    }
-
-    .card-slide .bottom .memo img{
-        height: 45px;
-    }
-    
-
-
-
-    .card-slide .bottom .memo h5{
-        font-size: 9px;
-        white-space: nowrap;
-    }
-
-
-    .card-slide .fatherr {
-        width: calc(100% - 15px );
-        left: 50%;
-        transform: translateX(-30px);
-    }
-
-
-    .nextt,
-    .prevv{
-        font-size: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-
-
-
-
-
-
-    .food{
-        margin-top: -100px !important;
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .tableu{
-        display: block;
-        font-size: 8px;
-    }
-    
-    table{
-        min-width: 40%;
-    }
-
-
-
-
-    .grid{
-        display: grid;
-        grid-template-columns: repeat( 3 , minmax( 40px , 1fr ));
-        grid-template-rows: repeat( 8 , minmax( 50px , 1fr ));
-        gap: 20px;
-        background: transparent;
-    }
-
+.actov{
+    transform: scale(1.08) !important ; 
+    background:#585858 !important;
+    color : white !important 
 }
-
