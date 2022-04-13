@@ -161,7 +161,9 @@ cursor: pointer;
     width: calc(100% - 80px );
     left: 50%;
     transform: translateX(-50px);
-
+    -o-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    -moz-transform: translateX(-50px);
 }
 
 
@@ -181,7 +183,7 @@ cursor: pointer;
 
 
 .card-slide .fatherr .bottom  .memo{
-    display:inline-block;   
+
     padding: 8px;
     position: relative;
     display: flex;
