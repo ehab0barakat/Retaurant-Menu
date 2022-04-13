@@ -1,7 +1,6 @@
-$(".memo").on("click",(e)=>{
-
-    $(".memo").css("transform","scale(1)")
-    $(e.target).parent().css("transform","scale(1.08)")
+$(".memo").after().on("click",(e)=>{
+    $(".memo").css({"transform":"scale(1)" ,  "background":"#f7f7f7" })
+    $(e.target).css({ "transform":"scale(1.08)" , "background":"#585858" })
 })
 
 
