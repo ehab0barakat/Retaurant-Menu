@@ -34,12 +34,17 @@ $(".nextt").on("click", ()=>{
     var father = Number.parseInt($(".father").css("width"));
     
 
+
     var w = left + card + 15
     
+
+    console.log(w)
+
     if( left >= 0 && left < bottom - father ){
         $(".nextt").addClass("actv")
         $(".bottom").css("transform", `translateX(${  w }px)`) ;
         $(".food").css("transform", `translateX(${  -w }px)`) ;
+        $(".grid .father .bottom").css("transform", `translateX(${  0 }px)`) ;
         $(".prevv").addClass("actv")
         
     }
@@ -63,6 +68,9 @@ $(".prevv").on("click", ()=>{
     var card = Number.parseInt($(".memo").css("width"));
     var bottom = Number.parseInt($(".bottom").css("width"));
     var father = Number.parseInt($(".father").css("width"));
+
+
+
     
     var w = left - card - 15
     
@@ -77,6 +85,7 @@ $(".prevv").on("click", ()=>{
         
         $(".nextt").addClass("actv")
         $(".bottom").css("transform", `translateX(${  w }px)`) ;
+        $(".grid .father .bottom").css("transform", `translateX(${  0 }px)`) ;
         $(".food").css("transform", `translateX(${  -w }px)`) ;
 
     }
