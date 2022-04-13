@@ -172,6 +172,7 @@ cursor: pointer;
     column-gap: 15px;
     transform: translateX(0);
     transition: .2s;
+    /* overflow-x: hidden; */
 
     
 }
