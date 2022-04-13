@@ -31,7 +31,7 @@ $(".nextt").on("click", ()=>{
     
     var card = Number.parseInt($(".memo").css("width"));
     var bottom = Number.parseInt($(".bottom").css("width"));
-    var father = Number.parseInt($(".father").css("width"));
+    var father = Number.parseInt($(".fatherr").css("width"));
     
 
 
