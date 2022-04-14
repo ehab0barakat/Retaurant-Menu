@@ -1,95 +1,60 @@
+$('.owl-carousel').owlCarousel({
+rtl:true,
+// loop:true,
+margin:10,
+nav:true,
+dots:false,
+responsive:{
+    0:{
+        items:4
+    },
+    467:{
+        items:5
+    },
+    576:{
+        items:6
+    },
+    768:{
+        items:5
+    },
+    992:{
+        items:6
+    },
+    1100:{
+        items:8
+    },
+    1550:{
+        items:10
+    },
+
+}
+})
+
+// --------------------------------------------------------------
+
 $(".memo").after().on("click",(e)=>{
+    
+    var data = $(e.target).parent()[0].classList[0] ;
     $(".memo").removeClass("actov");
-    $(e.target).addClass("actov");
+    $(e.target).addClass("actov")
+    $(".q").removeClass("act")
+    $(`.${data}`).addClass("act")
 })
 
-
-
-
-
-
-
-
-$("#btnGroupDrop1 ").on("click", (e)=>{
-    
-    $(".ss").removeClass("frame"); 
-    
-    $(e.target).parent().parent().parent().find(".ss").addClass("frame");
-    
-});
-
-
-
-
-
-
-$(".nextt").on("click", ()=>{
-    var style = window.getComputedStyle(document.querySelector('.bottom'));
-    var matrix = new WebKitCSSMatrix(style.transform);
-    var left   = matrix.m41 ;
-    
-    
-    var card = Number.parseInt($(".memo").css("width"));
-    var bottom = Number.parseInt($(".bottom").css("width"));
-    var father = Number.parseInt($(".fatherr").css("width"));
-    
-
-
-    var w = left + card + 15
-    
-
-    console.log(w)
-
-    if( left >= 0 && left < bottom - father ){
-        $(".nextt").addClass("actv")
-        $(".bottom").css("transform", `translateX(${  w }px)`) ;
-        $(".food").css("transform", `translateX(${  -w }px)`) ;
-        $(".grid .father .bottom").css("transform", `translateX(${  0 }px)`) ;
-        $(".prevv").addClass("actv")
-        
-    }
-    
-    else{
-        $(".nextt").removeClass("actv")
-        
-        
-    }
-    
-    
+$(".lang").on("click",(e)=>{
+$(".dropdown-menu").toggleClass("act");
 
 })
 
 
-
-$(".prevv").on("click", ()=>{
-    var style = window.getComputedStyle(document.querySelector('.bottom'));
-    var matrix = new WebKitCSSMatrix(style.transform);
-    var left   = matrix.m41 ;
-    var card = Number.parseInt($(".memo").css("width"));
-    var bottom = Number.parseInt($(".bottom").css("width"));
-    var father = Number.parseInt($(".father").css("width"));
-
-
-
-    
-    var w = left - card - 15
-    
-    
-    if ( left <= 0  ){
-        $(".prevv").removeClass("actv")
-        $(".bottom").css("transform", `translateX(${0}px)`) ;
-    }
-    
-    
-    if( left > 0 ){
-        
-        $(".nextt").addClass("actv")
-        $(".bottom").css("transform", `translateX(${  w }px)`) ;
-        $(".grid .father .bottom").css("transform", `translateX(${  0 }px)`) ;
-        $(".food").css("transform", `translateX(${  -w }px)`) ;
-
-    }
-
-
+$(window).on("resize load " , ()=>{
+    var height = Number.parseInt( $(".memo").css("height"));
+    var width = Number.parseInt( $(".memo").css("width")) / 2.5 ;
+    console.log(height)
+    $(".owl-next").css("height" , `${height}px`);
+    $(".owl-prev").css("height" , `${height}px`);
+    $(".owl-next").css("width" , `${width}px`);
+    $(".owl-prev").css("width" , `${width}px`);
+    // $(".owl-stage-outer").css("width" , `  calc( 100% -${(2 * width)}px)`);
 
 })

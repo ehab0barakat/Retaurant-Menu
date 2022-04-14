@@ -9,8 +9,6 @@ body{
 }
 
 
-
-
 .main-nav{
     display: flex;
     justify-content: space-between;
@@ -18,15 +16,12 @@ body{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background: #5e5e5e;
-    width: 95%;
     position: fixed;
     top: 0;
     z-index: 5000000000;
     left: 50%;
     transform: translateX(-50%);
-    -o-transform:translateX(-50%) ;
-    -moz-transform:translateX(-50%) ;
-    -ms-transform:translateX(-50%) ;
+
 }   
 
 
@@ -45,9 +40,6 @@ body{
     font-size: 20px;
     cursor: context-menu;
 }
-
-
-
 
 .logo{
     width: 10%;
@@ -88,103 +80,27 @@ cursor: pointer;
     padding-right: 0;
 }
 
-
-
-/* -----------------------------------------------------------------------  crsel      */
-
-.card-slide,
-.crsel{
-    width: 95%;
-}
-
-.crsel,
-.crsel img{
-    margin-top: 60px !important ;
-    max-height: 425px;
-}
-
-#carouselExampleDark{
-    overflow: hidden;
-    border-radius: 25px;
-}
-
-.carousel-indicators button{
-    background: white;
-    color: white;
-}
-
-
-.carousel-dark .carousel-indicators [data-bs-target] {
-    background-color: white;
-    height: 10px;
-    width: 50px;
-    border-radius: 95px;
-    border-top: 0;
-    border-bottom: 0;
-
+.dropdown-menu{
+    top: 100%;
+    left: 0%;
 }
 
 
 /* -------------------------------------------------------------------------------------- card slide */
-
-
-.card-slide  {
-    margin-top: 90px !important;
-    position: relative;
-    overflow-x: clip;
+.owl-carousel .owl-item img{
+    width: auto;
 }
 
 
-.card-slide::after  {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 100%;
-    left: 0;
-    top:0;
-    background: #222222;
-}
 
-.card-slide::before  {
-    content: "";
-    position: absolute;
-    width: 30px;
-    height: 100%;
-    right: 0;
-    z-index: 1;
-    top:0;
-    background: #222222;
-}
-
-
-.card-slide .fatherr {
-    width: calc(100% - 80px );
-    left: 50%;
-    transform: translateX(-50px);
-    -o-transform: translateX(-50px);
-    -ms-transform: translateX(-50px);
-    -moz-transform: translateX(-50px);
-}
-
-
-.card-slide .fatherr  .bottom{
-    display: flex;
-    column-gap: 15px;
-    transform: translateX(0);
-    transition: .2s;
-    /* overflow-x: hidden; */
-
-    
-}
-
-.card-slide .fatherr .bottom .memo img{
+.memo img{
     border-radius: 50px;
     background: white;
 }
 
 
-.card-slide .fatherr .bottom  .memo{
-
+.memo{
+    
     padding: 8px;
     position: relative;
     display: flex;
@@ -199,13 +115,8 @@ cursor: pointer;
     color: black;    
 }
 
-.card-slide .fatherr .bottom  .memo{
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 5px;
-}
 
-.card-slide .fatherr .bottom  .memo::after{
+.memo::after{
     content: "";
     width: 100%;
     height: 100%;
@@ -214,67 +125,6 @@ cursor: pointer;
     left: 0;
     z-index: 1;
     background: transparent;
-}
-
-
-
-.prevv ,
-.nextt{
-    position: absolute;
-    background: #747474;
-    height: 100%;
-    width: 20px;
-    z-index: 10;
-    top: 0;
-    color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 35px;
-    padding: 15px;
-    overflow-x: hidden;
-    cursor: pointer;
-}
-
-.actv{
-    color: #FF9031;
-
-}
-
-
-
-
-.nextt{
-    right: 0;
-    border-top-right-radius: 15px ;
-    border-bottom-right-radius:  15px;
-}
-
-.prevv{
-    left: 0;
-    border-top-left-radius: 15px ;
-    border-bottom-left-radius:  15px;
-}
-
-
-
-
-
-
-.frame{
-    background: transparent;
-    display: block !important;
-    position: absolute; 
-    inset: 0px auto auto 0px !important; 
-    margin-top: 200px !important; 
-    transform: translate(0) !important;
-    width: calc( 100% + 80px);
-    left: -30px !important;
-    border: none !important;
-    transform: translateX(0) !important;
-
-
-
 }
 
 
@@ -406,13 +256,6 @@ cursor: pointer;
 
 
 
-.food{
-    border: none;
-    width: 100%;
-    margin: 0 !important;
-    padding-bottom: 50px !important;
-}
-
 
 table,
 tr {
@@ -459,18 +302,96 @@ tr:hover{
 }
 
 
-
-
 .memo:hover{
+    background:#979797 ;
     transition: .2s;
-    transform: scale(1.07);
+    color: white;
 }
 
  
 
+
+.owl-stage-outer{
+    width: calc(100% - 100px);
+    transform: translateX(-50px) !important;    
+}
+
+
+
+
+.owl-prev,
+.owl-next{
+    position: absolute;
+    background: #747474 !important;
+    width: 50px;
+    height: 147px;
+    color: #ffffff;
+    font-size: 70px !important;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.owl-prev{
+    top: -4px;
+    right: 40px;
+    transform: translate3d(100%  ,0% ,0);
+    border-bottom-right-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+    color: orange;
+}
+.owl-next{
+    top: -4px;
+    left: 40px;
+    transform: translate3d(-100%  ,0% ,0);
+    border-bottom-left-radius: 20px !important;
+    border-top-left-radius: 20px !important;
+    color: orange;
+}
+
+
+.crsel,
+.food,
+.tableu,
+.sside,
+.grid{
+    padding-top: 20px !important ;
+}
+
+
+.main-nav,
+.crsel,
+.food{
+    width: 95%;
+}
+
+.crsel{
+    padding-top: 90px !important;
+}
+
+
+.sside{
+    padding-top: 40px !important;
+    padding-bottom: 35px !important;
+}
+.food{
+    padding-bottom: 50px !important;
+}
+
+.carousel-indicators button{
+    background: white !important;
+    border-radius: 20px ;
+    padding: 0 !important;
+    height: 10px !important;
+    width: 45px !important; 
+    border:0 !important ;
+}
+
+
+
+
 @media (max-width:1199px) {
-
-
+    
+    
     .links div {
         font-size: 20px;
     }
@@ -478,18 +399,10 @@ tr:hover{
         font-size: 25px;
         justify-content: center;
     }
-
-
-    .crsel,
-    .crsel img{
-    margin-top: 50px !important ;
-}
-
-
-.card-slide{
-    margin-top: 30px !important;
-}
-
+    
+    
+    
+    
 
 }
 
@@ -500,7 +413,19 @@ tr:hover{
 
 @media (max-width:992px) {
     
+    .owl-nav span {
+        display: flex;
+        position: absolute;
+        top: 0;
+        transform: translate(-12px, 10px) !important;
+    }
     
+    .carousel-indicators button{
+        height: 7px !important;
+        width: 30px !important; 
+    }
+
+
     .links div {
         font-size: 18px;
         padding-left: 0px;
@@ -521,8 +446,33 @@ tr:hover{
 }
 
 
+
+
 @media (max-width:768px) {
+    .crsel,
+    .food,
+    .tableu,
+    .sside,
+    .grid{
+        padding-top: 15px !important ;
+    }
     
+    
+    .crsel{
+        padding-top: 70px !important;
+    }
+    
+    
+    .sside{
+        padding-top: 30px !important;
+        padding-bottom: 20px !important;
+    }
+    
+
+    .owl-nav span {
+
+        transform: translate(-7px, -7px) !important;
+    }
     .main-nav .logo img{
         width: 80px;
     }
@@ -547,63 +497,33 @@ tr:hover{
     .icons .fa-caret-down {
         font-size: 12px;
     }
-    .crsel,
-    .crsel img{
-    margin-top: 40px !important ;
-    }
     
-   
-
-    .carousel-control-next-icon, .carousel-control-prev-icon {
-        width: 1.5rem;
-        margin-top: 45px;
-    }
-
     
-    .carousel-dark .carousel-indicators [data-bs-target] {
-        height: 6px;
-        width: 25px;
-        border-radius: 95px;
-        border-top: 0;
-        border-bottom: 0;
-
-    }
-
-
-    .card-slide{
-        margin-top: 20px !important;
-    }
-
-    .card-slide .bottom .memo img{
+    .memo img{
         height: 70px;
     }
     
-
-    .card-slide .bottom .memo h5{
+    
+    .memo h5{
         font-size: 11px;
         white-space: nowrap;
     }
-
-
-    .card-slide .fatherr {
-        width: calc(100% - 15px );
-        left: 50%;
-        transform: translateX(-30px);
+    
+    .owl-stage-outer{
+        width: calc(100% - 60px);
+        transform: translateX(-30px) !important;
     }
+    .owl-prev{
+        top: -4px;
+        right: 30px;
+        
+    }
+    .owl-next{
+        top: -4px;
+        left: 30px;
 
-
-    .nextt,
-    .prevv{
-        font-size: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
     }
     
-    .food{
-        margin-top: -70px !important;
-    }
-
-
     .grid{
         display: grid;
         grid-template-columns: repeat( 4 , minmax( 75px , 1fr ));
@@ -611,13 +531,8 @@ tr:hover{
         gap: 7px;
         background: transparent;
     }
-
     
-    .frame{
-        width: calc(100% + 60px);
-    }
     
-
     .sside h4{
         font-size: 15px;
     }
@@ -637,20 +552,63 @@ tr:hover{
         
     }
     
-
-
-
+    .lang li {
+        font-size: 13px;
+    }
+    
+    
 }    
 
 
 
 @media (max-width:576px) {
     
-    .container{
-        width: 430px;
+    .crsel,
+    .food,
+    .tableu,
+    .sside,
+    .grid{
+        padding-top: 10px !important ;
+    }
+    
+    
+    .crsel{
+        padding-top: 55px !important;
+    }
+    
+    
+    .sside{
+        padding-top: 25px !important;
+        padding-bottom: 15px !important;
+    }
+    
+    
+    .carousel-indicators button{
+        height: 5px !important;
+        width: 25px !important; 
     }
 
 
+
+    .owl-nav span {
+        font-size: smaller;
+        transform: translate(-4px, -10px) !important;
+    }
+
+
+
+    .lang ul {
+        font-size: 11px;
+        width: 50px !important;
+    }
+    .lang li {
+        font-size: 11px;
+    }
+    .container{
+        width: 430px;
+    }
+    
+    
     .main-nav .logo img{
         width: 60px;
     }
@@ -678,68 +636,41 @@ tr:hover{
     .icons .fa-caret-down {
         font-size: 10px;
     }
-    .crsel,
-    .crsel img{
-    margin-top: 30px !important ;
+    
+    
+    .owl-stage-outer{
+        width: calc(100% - 30px);
+        transform: translateX(-15px) !important;
+    }
+    .owl-prev{
+        right: 20px;
+        border-bottom-right-radius: 10px !important;
+        border-top-right-radius: 10px !important;
+        
+    }
+    .owl-next{
+        left: 20px;
+        border-bottom-left-radius: 10px !important;
+        border-top-left-radius: 10px !important;
+    
     }
     
-   
-
-    .carousel-control-next-icon, .carousel-control-prev-icon {
-        width: 1.5rem;
-        margin-top: 45px;
-    }
-
     
-    .carousel-dark .carousel-indicators [data-bs-target] {
-        height: 6px;
-        width: 25px;
-        border-radius: 95px;
-        border-top: 0;
-        border-bottom: 0;
-
-    }
-
-
-    .card-slide{
-        margin-top: 20px !important;
-    }
-
-    .card-slide .bottom .memo img{
+    .memo img{
         height: 50px;
     }
     
     .card-slide .fatherr .bottom {
         column-gap: 8px;
     }
-
-    .card-slide .bottom .memo h5{
+    
+    .memo h5{
         font-size: 10px;
         white-space: nowrap;
     }
-
-
-    .card-slide .fatherr {
-        width: calc(100% - 15px );
-        left: 50%;
-        transform: translateX(-30px);
-    }
-
-
-    .nextt,
-    .prevv{
-        font-size: 20px;
-        padding-left: 7px;
-        padding-right: 7px;
-    }
     
-    .food{
-        margin-top: -100px !important;
-    }
-
-
-
-
+    
+    
     .tableu table{
         font-size: 12px;
     }
@@ -755,10 +686,6 @@ tr:hover{
     
     .grid .father{
         overflow: hidden;
-    }
-    
-    .frame{
-        width: calc(100% + 60px);
     }
     
 
@@ -809,7 +736,7 @@ tr:hover{
 
 @media (max-width:378px) {
     .container{
-        max-width: 320px;
+        max-width: 310px;
     }
 
 
@@ -824,17 +751,42 @@ tr:hover{
         width: 50px !important;
     }
 
-    .crsel,
-    .crsel img{
-    margin-top: 25px !important ;
-    }
+
 
 }
 
 
 
 .actov{
-    transform: scale(1.08) !important ; 
     background:#585858 !important;
     color : white !important 
 }
+
+
+.q{
+    display: none ;
+}
+
+
+.act{
+    display: block;
+}
+
+.carousel-item,
+.carousel-inner{
+    border-radius: 20px;
+}
+
+.carousel-inner img{
+    max-height: 410px !important;
+}
+
+
+.owl-theme .owl-nav [class*=owl-]{
+    color: orange !important;
+}
+
+.owl-theme .owl-nav .disabled{
+    color: #d9d8d8 !important;
+}
+
