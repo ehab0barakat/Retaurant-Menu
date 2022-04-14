@@ -349,6 +349,23 @@ tr:hover{
 }
 
 
+.carousel-control-prev-icon {
+    background-image: url(../image/back-button\ \(1\).png);
+    filter: none !important ;
+    transform: scale(1.4);
+    filter: brightness(1.25);
+}
+.carousel-control-next-icon {
+    background-image: url(../image/next.png);
+    filter: none !important ;
+    transform: scale(1.4);
+    filter: brightness(1.25);
+
+}
+
+
+
+
 .crsel,
 .food,
 .tableu,
@@ -357,12 +374,12 @@ tr:hover{
     padding-top: 20px !important ;
 }
 
-
+/* 
 .main-nav,
 .crsel,
 .food{
     width: 95%;
-}
+} */
 
 .crsel{
     padding-top: 90px !important;
@@ -413,6 +430,17 @@ tr:hover{
 
 @media (max-width:992px) {
     
+    .carousel-control-prev-icon {
+        transform: scale(1.2) !important;
+    }
+    .carousel-control-next-icon {
+        transform: scale(1.2) !important;
+
+    }
+
+
+
+
     .owl-nav span {
         display: flex;
         position: absolute;
@@ -449,6 +477,20 @@ tr:hover{
 
 
 @media (max-width:768px) {
+   
+   
+    .carousel-control-prev-icon {
+        transform: scale(1) !important;
+    }
+    .carousel-control-next-icon {
+        transform: scale(1) !important;
+
+    }
+
+
+   
+   
+   
     .crsel,
     .food,
     .tableu,
@@ -563,6 +605,19 @@ tr:hover{
 
 @media (max-width:576px) {
     
+    
+
+
+    .carousel-control-prev-icon {
+        transform: scale(.8) !important;
+    }
+    .carousel-control-next-icon {
+        transform: scale(.8) !important;
+
+    }
+
+
+
     .crsel,
     .food,
     .tableu,
@@ -718,6 +773,18 @@ tr:hover{
 
 @media (max-width:476px) {
     
+
+
+    .carousel-control-prev-icon {
+        transform: scale(.7) !important;
+    }
+    .carousel-control-next-icon {
+        transform: scale(.7) !important;
+
+    }
+
+
+
     .container{
         max-width: 345px;
     }
