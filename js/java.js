@@ -46,15 +46,23 @@ $(".dropdown-menu").toggleClass("act");
 
 })
 
-
-$(window).on("resize load " , ()=>{
+$(document).onready(()=>{
     var height = Number.parseInt( $(".memo").css("height"));
     var width = Number.parseInt( $(".memo").css("width")) / 2.5 ;
-    console.log(height)
     $(".owl-next").css("height" , `${height}px`);
     $(".owl-prev").css("height" , `${height}px`);
     $(".owl-next").css("width" , `${width}px`);
     $(".owl-prev").css("width" , `${width}px`);
-    // $(".owl-stage-outer").css("width" , `  calc( 100% -${(2 * width)}px)`);
 
 })
+$(window).on("resize load " , ()=>{
+    var height = Number.parseInt( $(".memo").css("height"));
+    var width = Number.parseInt( $(".memo").css("width")) / 2.5 ;
+    $(".owl-next").css("height" , `${height}px`);
+    $(".owl-prev").css("height" , `${height}px`);
+    $(".owl-next").css("width" , `${width}px`);
+    $(".owl-prev").css("width" , `${width}px`);
+})
+
+
+
