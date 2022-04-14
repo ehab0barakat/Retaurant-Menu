@@ -46,7 +46,7 @@ $(".dropdown-menu").toggleClass("act");
 
 })
 
-$(document).onready(()=>{
+$(document).ready(()=>{
     var height = Number.parseInt( $(".memo").css("height"));
     var width = Number.parseInt( $(".memo").css("width")) / 2.5 ;
     $(".owl-next").css("height" , `${height}px`);
